@@ -1,0 +1,37 @@
+﻿<html>
+<head>
+    @{
+        ViewBag.Title = "VendorCars";
+    }
+</head>
+<body>
+    <div ng-app="DemoCarApp">
+            <div ng-controller="VendorController">
+                <br />
+                <div id="grid" ui-grid="gridOptions" class="text-center" ui-grid-auto-resize ui-grid-cellNav ui-grid-pinning ui-grid-pagination ui-grid-edit ui-grid-resize-columns ui-grid-selection style="width:auto;height:500px;font-size: 12px;"></div>
+            <div ng-show="spinner">
+                <i class="fa fa-spinner" style="height: 100vh; width: 100%;z-index: 20000; position: absolute; top: 0;left: 0; background-color: #000; opacity: 0.3;"></i>
+                <img src="~/Image/LoadingImage.gif" alt="Loading..." style="position: absolute; left: 50%; top: 50%;" />
+            </div>
+        </div>
+    </div>
+
+    @section scripts{
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-animate.js"></script>
+    <script src="~/Scripts/angular-touch.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+    <script src="~/Scripts/application/app.js"></script>
+    <script src="~/Scripts/application/controller.js"></script>
+    <script src="~/Scripts/application/services.js"></script>
+    <script src="~/Scripts/application/modalService.js"></script>
+    <script src="~/Scripts/ui-grid.js"></script>
+    <link rel="styleSheet" href="~/Content/ui-grid.min.css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/angular-route.js"></script>
+    }
+
+
+</body>
+</html>
+
